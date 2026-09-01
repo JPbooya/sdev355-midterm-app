@@ -1,0 +1,86 @@
+[
+    {
+        "id": 1,
+        "name": "Library 101",
+        "building": "Library",
+        "seats": 4,
+        "available": true
+    },
+    {
+        "id": 2,
+        "name": "Library 204",
+        "building": "Library",
+        "seats": 6,
+        "available": true
+    },
+    {
+        "id": 3,
+        "name": "Library 318",
+        "building": "Library",
+        "seats": 2,
+        "available": false
+    },
+    {
+        "id": 4,
+        "name": "Science Hall 12",
+        "building": "Science Hall",
+        "seats": 8,
+        "available": true
+    },
+    {
+        "id": 5,
+        "name": "Science Hall 14",
+        "building": "Science Hall",
+        "seats": 8,
+        "available": false
+    },
+    {
+        "id": 6,
+        "name": "Science Hall 220",
+        "building": "Science Hall",
+        "seats": 3,
+        "available": true
+    },
+    {
+        "id": 7,
+        "name": "Student Center A",
+        "building": "Student Center",
+        "seats": 10,
+        "available": true
+    },
+    {
+        "id": 8,
+        "name": "Student Center B",
+        "building": "Student Center",
+        "seats": 12,
+        "available": false
+    },
+    {
+        "id": 9,
+        "name": "Engineering 105",
+        "building": "Engineering",
+        "seats": 5,
+        "available": true
+    },
+    {
+        "id": 10,
+        "name": "Engineering 210B",
+        "building": "Engineering",
+        "seats": 4,
+        "available": true
+    },
+    {
+        "id": 11,
+        "name": "Fine Arts Studio 3",
+        "building": "Fine Arts",
+        "seats": 6,
+        "available": false
+    },
+    {
+        "id": 12,
+        "name": "Fine Arts Annex 1",
+        "building": "Fine Arts",
+        "seats": 2,
+        "available": true
+    }
+]
