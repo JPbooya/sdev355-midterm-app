@@ -1,11 +1,121 @@
+import { useState } from "react";
+import RoomCard from "./components/RoomCard";
+
+const ROOMS = [
+    {
+        "id": 1,
+        "name": "Library 101",
+        "building": "Library",
+        "seats": 4,
+        "available": true
+    },
+    {
+        "id": 2,
+        "name": "Library 204",
+        "building": "Library",
+        "seats": 6,
+        "available": true
+    },
+    {
+        "id": 3,
+        "name": "Library 318",
+        "building": "Library",
+        "seats": 2,
+        "available": false
+    },
+    {
+        "id": 4,
+        "name": "Science Hall 12",
+        "building": "Science Hall",
+        "seats": 8,
+        "available": true
+    },
+    {
+        "id": 5,
+        "name": "Science Hall 14",
+        "building": "Science Hall",
+        "seats": 8,
+        "available": false
+    },
+    {
+        "id": 6,
+        "name": "Science Hall 220",
+        "building": "Science Hall",
+        "seats": 3,
+        "available": true
+    },
+    {
+        "id": 7,
+        "name": "Student Center A",
+        "building": "Student Center",
+        "seats": 10,
+        "available": true
+    },
+    {
+        "id": 8,
+        "name": "Student Center B",
+        "building": "Student Center",
+        "seats": 12,
+        "available": false
+    },
+    {
+        "id": 9,
+        "name": "Engineering 105",
+        "building": "Engineering",
+        "seats": 5,
+        "available": true
+    },
+    {
+        "id": 10,
+        "name": "Engineering 210B",
+        "building": "Engineering",
+        "seats": 4,
+        "available": true
+    },
+    {
+        "id": 11,
+        "name": "Fine Arts Studio 3",
+        "building": "Fine Arts",
+        "seats": 6,
+        "available": false
+    },
+    {
+        "id": 12,
+        "name": "Fine Arts Annex 1",
+        "building": "Fine Arts",
+        "seats": 2,
+        "available": true
+    }
+]
+
+
 export default function App() {
   // YOUR WORK GOES HERE — Parts 1 through 4 of the exercise document.
+  const [rooms, setRooms] = useState(ROOMS);
+  const[search, setSearch] = useState("");
+
+  const shownRooms = rooms.filter((room) => room.name.toLowerCase().includes(search.toLowerCase()))
 
   return (
     <main>
       <h1>Campus Study Rooms</h1>
 
-      {/* YOUR WORK GOES HERE — what App renders is up to you. */}
+      <input
+        className="search"
+        type="text"
+        placeholder="Search rooms"
+    /* your value and change handler go here */
+        value={search}
+        onChange={(e) => setSearch(e.target.value)}
+      />
+    { shownRooms.length === 0
+     ? <p className="status">No rooms match that search.</p>
+     : <div className="room-list">
+        {shownRooms.map((room) => (
+            <RoomCard key={room.id} room={room} />
+        ))}
+      </div>
+    } 
     </main>
   );
 }
